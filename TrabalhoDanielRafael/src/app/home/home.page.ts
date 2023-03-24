@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+    public categorias = [
+    { codigo: 1, nome: 'Refrigerantes'},
+    { codigo: 2, nome: 'Cervejas'},
+    { codigo: 3, nome: 'Vinhos'},
+    { codigo: 4, nome: 'Sucos'}
+  ]
 
   constructor() {}
 
