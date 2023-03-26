@@ -26,7 +26,7 @@ export class HomePage {
     slidesPerView: 2
   }
 
-  public pathImgs = '../../assets/img/';
+  public pathImgs = '../../assets/imagens/';
 
 
   public seleciona = 0;
@@ -45,9 +45,19 @@ export class HomePage {
     .map(el => el.visibled = true);
   }
   public goBebida(bebida: any) {
-    this.navCtrl.navigateForward('bebida', {
+    this.navCtrl.navigateForward('produto', {
       queryParams: { bebida:bebida }
     });
+  }
+
+  public formataValor(valor:any) {
+    let retorno = "";
+    
+    let formatar = Intl.NumberFormat("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    retorno = formatar.format(valor)
+    retorno = "R$ " + retorno;
+
+    return retorno;
   }
 
 }
