@@ -26,8 +26,8 @@
   text-decoration: none;
 }
 
-.card-produto{
-  background-color: rgb(251, 251, 251);
+.card-bebida{
+  background-color: rgb(195, 223, 245);
   padding: 15px 10px;
   border-radius: 8px;
   -webkit-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
@@ -35,7 +35,7 @@
   box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
 }
 
-.img-produto{
+.img-bebida{
   overflow: hidden;
   padding: 0;
   text-align: center;
@@ -43,7 +43,7 @@
   height: 120px;
 }
 
-.img-produto img{
+.img-bebida img{
   height: 100%;
 }
 
@@ -68,15 +68,15 @@
   font-weight: bold;
 }
 
-.slide-actived{
+.slide-ativo{
   font-weight: 500;
-  border: 1px solid var(--white-smoke);
+  border: 3px solid white;
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.slide-no-actived{
+.slide-naoativo{
   padding-top: 5px;
   padding-bottom: 5px;
   border: 1px solid transparent;

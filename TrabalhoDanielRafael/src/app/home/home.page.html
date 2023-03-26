@@ -1,38 +1,29 @@
 <ion-header [translucent]="true">
 
-  <ion-row class="ion-align-items-left header-line">
-    <ion-col size="1">
+  <ion-row class="ion-align-items-center header-line">
+    <ion-col size="2" class="menu-icon">
       <ion-icon name="reorder-three"></ion-icon>
     </ion-col>
-    <ion-col size="5">
+    <ion-col size="8">
       ADEGA LOPES
     </ion-col>
-    <ion-col size="6" class="ion-text-end account-icon">
+    <ion-col size="2" class="ion-text-end account-icon">
       <ion-icon name="cart-outline"></ion-icon>
     </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col> </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col> </ion-col>
   </ion-row>
 
   <ion-row class="ion-align-items-center header-subline">
     <ion-slides pager="false" class="slide-line">
-      <ion-slide *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == seleciona ? 'slide-actived' : 'slide-no-actived'" (click)="setSeleciona(categoria.codigo)">
+      <ion-slide *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == seleciona ? 'slide-ativo' : 'slide-naoativo'" (click)="setSeleciona(categoria.codigo)">
         {{ categoria.nome }}
       </ion-slide>
     </ion-slides>
   </ion-row>
-  <ion-toolbar>
-   
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-row>
-    <ion-col size="5" *ngFor="let bebida of bebidas; let ix = index" [hidden]="!bebida.visibled" (click)="goBebida(bebida)">
+    <ion-col size="6" *ngFor="let bebida of bebidas; let ix = index" [hidden]="!bebida.visibled" (click)="goBebida(bebida)">
       <ion-row>
         <ion-col size="12" class="card-bebida">
           
