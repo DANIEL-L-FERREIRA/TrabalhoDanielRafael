@@ -1,16 +1,25 @@
 <ion-header [translucent]="true">
 
-  <ion-row class="ion-align-items-center header-line">
-    <ion-col size="2" class="menu-icon">
+  <ion-row class="ion-align-items-left header-line">
+    <ion-col size="1">
       <ion-icon name="reorder-three"></ion-icon>
     </ion-col>
-    <ion-col size="8">
-      Lopes Bebidas
+    <ion-col size="5">
+      ADEGA LOPES
     </ion-col>
-    <ion-col size="2" class="ion-text-end account-icon">
-      <ion-icon name="person-circle-outline"></ion-icon>
+    <ion-col size="5" class="ion-text-end account-icon">
+      <ion-icon name="cart-outline"></ion-icon>
     </ion-col>
   </ion-row>
+
+  <ion-row class="ion-align-items-center header-subline">
+    <ion-slides pager="false" class="slide-line">
+      <ion-slide *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == seleciona ? 'slide-actived' : 'slide-no-actived'" (click)="setSeleciona(categoria.codigo)">
+        {{ categoria.nome }}
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+
 
 
   <ion-toolbar>
@@ -19,11 +28,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-     
-    </ion-toolbar>
-  </ion-header>
+  <ion-row>
+    <ion-col size="6" *ngFor="let bebida of bebidas; let ix = index" [hidden]="!bebida.visibled" (click)="goBebida(bebida)">
+      <ion-row>
+        <ion-col size="12" class="card-bebida">
+          
+          <ion-row>
+            <ion-col size="12" class="img-bebida">
+              <img [src]="pathImgs + bebida.imagens[0]"/>
+            </ion-col>
+          </ion-row>
 
-  
+          <ion-row style="height: 45px;">
+            <ion-col size="12" class="titulo-bebida">
+              {{bebida.nome}}
+            </ion-col>
+          </ion-row>
+
+    
+
+          <ion-row>
+            <ion-col size="12" class="col-botao-detalhes">
+              <span class="botao-detalhes"> Detalhes </span>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="btn-order">
+    <ion-fab-button>
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

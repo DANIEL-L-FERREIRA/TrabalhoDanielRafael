@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,40 @@ export class HomePage {
     { codigo: 4, nome: 'Sucos'}
   ]
 
-  constructor() {}
+  public bebidas = [
+    { codigo: 1, categoria: 1, descricao: 'Refrigerante Coca Cola Original - Contém açucar', nome: 'Coca-Cola lata 350ml - Original', valor: 4.99, imagens: ['COCA LATA.jpg'], visibled: false },
+    { codigo: 2, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original - Contém açucar', nome: 'Fanta Laranja lata 350ml - Original', valor: 4.59, imagens: ['FANTA LATA.jpg'], visibled: false },
+    { codigo: 3, categoria: 1, descricao: 'Refrigerante Coca Cola Original Pet 600ml - Contém açucar', nome: 'Coca-Cola Pet 600ml - Original', valor: 7.99, imagens: ['COCA 600.jpg'], visibled: false },
+    { codigo: 4, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original Pet 600ml - Contém açucar', nome: 'Fanta Laranja Pet 600ml - Original', valor: 6.99, imagens: ['FANTA 600.jpeg'], visibled: false },
+   
+  ]
+
+  public slideOpts = {
+    slidesPerView: 2
+  }
+
+  public pathImgs = '../../assets/img/';
+
+
+  public seleciona = 0;
+
+  constructor(private navCtrl: NavController) {
+    this.setSeleciona(1);
+  }
+
+  public setSeleciona(codigoCategoria: any) {
+    this.seleciona = codigoCategoria;
+
+    this.bebidas.map(el => el.visibled = false);
+
+    this.bebidas
+    .filter(el => el.categoria == this.seleciona)
+    .map(el => el.visibled = true);
+  }
+  public goBebida(bebida: any) {
+    this.navCtrl.navigateForward('bebida', {
+      queryParams: { bebida:bebida }
+    });
+  }
 
 }
