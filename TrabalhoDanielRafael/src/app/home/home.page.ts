@@ -15,10 +15,10 @@ export class HomePage {
   ]
 
   public bebidas = [
-    { codigo: 1, categoria: 1, descricao: 'Refrigerante Coca Cola Original - Contém açucar', nome: 'Coca-Cola lata 350ml - Original', valor: 4.99, imagens: ['COCA LATA.jpg'], visibled: false },
-    { codigo: 2, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original - Contém açucar', nome: 'Fanta Laranja lata 350ml - Original', valor: 4.59, imagens: ['FANTA LATA.jpg'], visibled: false },
-    { codigo: 3, categoria: 1, descricao: 'Refrigerante Coca Cola Original Pet 600ml - Contém açucar', nome: 'Coca-Cola Pet 600ml - Original', valor: 7.99, imagens: ['COCA 600.jpg'], visibled: false },
-    { codigo: 4, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original Pet 600ml - Contém açucar', nome: 'Fanta Laranja Pet 600ml - Original', valor: 6.99, imagens: ['FANTA 600.jpeg'], visibled: false },
+    { codigo: 1, categoria: 1, descricao: 'Refrigerante Coca Cola Original - Lata 350 ml - Contém açucar', nome: 'Coca-Cola lata 350ml - Original', valor: 4.99, imagens: ['COCA LATA.jpg'], visibled: false },
+    { codigo: 2, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original - Lata 350 ml - Contém açucar', nome: 'Fanta Laranja lata 350ml - Original', valor: 4.59, imagens: ['FANTA LATA.jpg'], visibled: false },
+    { codigo: 3, categoria: 1, descricao: 'Refrigerante Coca Cola Original PET 1,5L - Contém açucar', nome: 'Coca-Cola 1,5 Litros - Original', valor: 6.99, imagens: ['COCA 1,5 L.png'], visibled: false },
+    { codigo: 4, categoria: 1, descricao: 'Refrigerante Fanta Laranja Original PET 2L - Contém açucar', nome: 'Fanta Laranja 2 Litros - Original', valor: 7.99, imagens: ['FANTA 2L.png'], visibled: false },
    
   ]
 
