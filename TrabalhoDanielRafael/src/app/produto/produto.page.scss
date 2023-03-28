@@ -1,14 +1,17 @@
 .descricao-bebida{
     text-align: center;
-    color: #df6969;
+    color: #fefefe;
     font-size: 18px;
     margin-top: 20px;
+    background-color: rgb(75, 129, 200);
+    font-weight: bold;
 }
 
 .valor-bebida{
-    color: #0c3519;
+    color: #070707;
     font-size: 24px;
     text-align: center;
+    font-weight: bold;
 }
 
 .footer-bebida{
@@ -19,10 +22,26 @@
 }
 
 .inp-quantidade{
-    color: #0c3519;
+    color: #080808;
     text-align: center;
     background-color: var(--white-smoke);
     border-radius: 8px;
     max-width: 100%;
     width: 100%;
+    font-weight: bold;
 }
+
+.imagem-bebida{
+    text-align: center;
+    color: #100f0f;
+    font-weight: bold;
+    background-color: rgb(246, 246, 244);
+  }
+
+  .addbebida{
+    background-color: #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  

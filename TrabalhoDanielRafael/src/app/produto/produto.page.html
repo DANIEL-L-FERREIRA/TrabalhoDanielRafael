@@ -1,15 +1,17 @@
 
 <ion-header>
+
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{ bebida.nome }}</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="true">
+  <ion-slides pager="true" class="imagem-bebida">
     <ion-slide *ngFor="let imagem of bebida.imagens; let ix = index">
       <ion-img [src]="pathImgs + imagem"></ion-img>
     </ion-slide>
@@ -22,7 +24,7 @@
   </ion-row>
 </ion-content>
 
-<ion-footer class="footer-bebida">
+<ion-footer class="addbebida">
   <ion-row class="ion-align-items-center">
     <ion-col size="6" class="valor-bebida">
       {{ formataValor(bebida.valor) }}
@@ -35,7 +37,7 @@
           </ion-button>
         </ion-col>
         <ion-col size="4" class="ion-text-center">
-          <ion-input class="inp-quantidade" type="number" [(ngModel)]="quantidade"></ion-input>
+          <ion-input class="bebidaquantidade" type="number" [(ngModel)]="quantidade"></ion-input>
         </ion-col>
         <ion-col size="4" class="ion-text-center">
           <ion-button (click)="remove()">
